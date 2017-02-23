@@ -17,8 +17,8 @@ class Segment_Consumer_LibCurl extends Segment_QueueConsumer {
   }
 
   /**
-   * Make a sync request to our API, and immediately send
-   * to the API. If debug is enabled, we wait for the response
+   * Make a sync request to our API. If debug is
+   * enabled, we wait for the response
    * and retry once to diminish impact on performance.
    * @param  array   $messages array of all the messages to send
    * @return boolean whether the request succeeded
@@ -67,6 +67,8 @@ class Segment_Consumer_LibCurl extends Segment_QueueConsumer {
 
     //close connection
     curl_close($ch);
+
+    return $httpResponse;
   }
 
   public function executePost($ch) {

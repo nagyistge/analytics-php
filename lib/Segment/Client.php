@@ -19,7 +19,7 @@ class Segment_Client {
    * @param string $secret
    * @param array  $options array of consumer options [optional]
    * @param string Consumer constructor to use, libcurl by default.
-   * @return string $consumer_type
+   *
    */
   public function __construct($secret, $options = array()) {
 
